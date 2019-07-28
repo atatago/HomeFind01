@@ -110,7 +110,7 @@ class DeviceFinder(context: Context, serviceType:String, port:Int) {
         discoveryListener = object : NsdManager.DiscoveryListener {
             override fun onServiceFound(info: NsdServiceInfo?) {
                 if (!info?.serviceName?.toLowerCase().equals(SERVICE_NAME.toLowerCase()) && info is NsdServiceInfo) {
-                    Log.d(TAG, "onServiceFound : ${info?.serviceName} : ${info?.host} : ${info?.serviceType} : ${info?.port}")
+                    Log.d(TAG, "onServiceFound : ${info.serviceName} : ${info.host} : ${info.serviceType} : ${info.port}")
                     infoList.add(info)
                 }
             }

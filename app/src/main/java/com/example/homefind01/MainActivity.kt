@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
                 deviceList = devices
                 if (deviceList is List<HostInfo>) {
                     for (d in deviceList!!) {
-                        Log.d(TAG, "aaaaaaaaa -> Name : ${d.Name}, IPAddress : ${d.IpAddress.toString()}")
+                        Log.d(TAG, "Result device -> Name : ${d.Name}, IPAddress : ${d.IpAddress.toString()}, Port:${d.Port}")
                     }
                 }
             })
